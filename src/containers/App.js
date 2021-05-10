@@ -24,27 +24,12 @@ const mapDispatchtoProps = (dispatch) => {
 }
 
 class App extends Component{
-
-  // constructor(props){
-  //   super(props);
-  //   this.state = {
-  //     robots: []
-  //   }
-  // }
   
   componentDidMount(){
-    // fetch('https://jsonplaceholder.typicode.com/users')
-    //   .then(res => res.json())
-    //   .then(users => this.setState({ robots: users }) )
     this.props.onRequestRobots()
   }
 
-  // onSearchChange = (event) => {
-  //   this.setState({ searchField: event.target.value });
-  // }
-
   render(){
-    // const { robots } = this.state;
     const { searchField, onSearchChange, robots, isPending } = this.props
     const filteredRobots = robots.filter((robot) => {
       return robot.name.toLocaleLowerCase().includes(searchField.toLocaleLowerCase())
