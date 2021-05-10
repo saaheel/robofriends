@@ -4,9 +4,9 @@ import SearchBox from '../components/SearchBox';
 import './App.css';
 import Scroll from '../components/Scroll'
 import ErrorBoundry from '../components/ErrorBoundry'
+import { setSearchField } from '../action'
 
-
-function App(params) {
+function App() {
     
   const [robots, setRobots] = useState([])
   const [count, setCount] = useState(0)
